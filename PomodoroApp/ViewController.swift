@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             }else {
                 timer.invalidate()
                 isTimerStarted = false
-                startButton.setTitle("Continue", for: .normal)
+                startButton.setTitle("Resume", for: .normal)
                 startButton.setTitleColor(UIColor.green, for: .normal)
             }
         }
