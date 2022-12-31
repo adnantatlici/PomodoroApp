@@ -28,21 +28,21 @@ class ViewController: UIViewController {
     
     @IBAction func startButtonTapped(_ sender: Any) {
         cancelButton.isEnabled = true
-        cancelButton.alpha = 1.0
-        if !isTimerStarted{
-            
-            startTimer()
-            isTimerStarted = true
-            startButton.setTitle("Pause", for: .normal)
-            startButton.setTitleColor(UIColor.orange, for: .normal)
-            
-            
-        }else {
-            timer.invalidate()
-            isTimerStarted = false
-            
+            cancelButton.alpha = 1.0
+            if !isTimerStarted{
+                startTimer()
+                isTimerStarted = true
+                startButton.setTitle("Pause", for: .normal)
+                startButton.setTitleColor(UIColor.orange, for: .normal)
+            }else {
+                timer.invalidate()
+                isTimerStarted = false
+                startButton.setTitle("Continue", for: .normal)
+                startButton.setTitleColor(UIColor.green, for: .normal)
+            }
         }
-    }
+
+
     
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
